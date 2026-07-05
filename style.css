@@ -382,6 +382,57 @@ img, svg { max-width: 100%; }
 .contact-sub { color: var(--text-dim); margin-bottom: 2.5rem; }
 .contact-loc { margin-top: 1.75rem; color: var(--text-dim); font-size: 0.95rem; }
 
+/* ---------- faq ---------- */
+.faq-list { max-width: 780px; display: grid; gap: 0.9rem; }
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  padding: 0;
+  transition: border-color 300ms;
+}
+.faq-item[open] { border-color: var(--line); }
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 1.1rem 1.4rem;
+  position: relative;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 1.3rem;
+  color: var(--accent);
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: transform 250ms var(--ease-out);
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item summary:hover, .faq-item summary:focus-visible { color: var(--accent); }
+.faq-item p { color: var(--text-dim); padding: 0 1.4rem 1.2rem; }
+
+/* ---------- blog ---------- */
+.blog-page { padding-top: 8rem; }
+.post { max-width: 720px; margin: 0 auto var(--space-section); }
+.post h2 { font-size: clamp(1.6rem, 1.2rem + 2vw, 2.4rem); margin-bottom: 0.4rem; }
+.post .post-meta { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1.5rem; }
+.post h3 { font-size: 1.25rem; margin: 1.75rem 0 0.5rem; }
+.post p { color: var(--text-dim); margin-bottom: 1rem; }
+.post strong { color: var(--text); }
+.post .post-cta {
+  border-left: 3px solid var(--accent);
+  padding: 0.9rem 1.2rem;
+  background: var(--surface);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin-top: 1.5rem;
+}
+.footer-link { color: var(--text-dim); }
+.footer-link:hover { color: var(--accent); }
+
 /* ---------- footer ---------- */
 .site-footer {
   padding: 2.5rem var(--pad-x);
